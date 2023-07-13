@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>我的第一篇博客文章 | Hexo</title>
+  <title>基于PHP的停车场管理系统的设计与实现 | Hexo</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -376,14 +376,14 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp')">
+  background-position: center center;position: relative;background-image:url('https://pica.zhimg.com/80/v2-61f99f8dcf899f54cad2a1aa28b21e44_1440w.webp')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        我的第一篇博客文章
+        基于PHP的停车场管理系统的设计与实现
       </span>
     </div>
     
@@ -414,14 +414,9 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <p>##内存分区模型<br>代码区：存放函数的二级制代码，由操作系统进行管理的<br>全局区：存放全局变量和静态变量以及常量<br>栈区：由编译器自动分配释放，存放函数的参数值，局部变量等<br>堆区： 由程序员分配和释放，若程序员不释放，程序结束时由操作系统回收<br>内存四区意义：不同区域存放的数据，赋予不同的声明周期，给我们更大的灵活编程</p>
-<p>程序运行前<br>在程序编译后，生成了exe可执行文件，未执行该程序前分为两个区域。</p>
-<p>代码区：</p>
-<p>存放cpu执行的机器指令<br>代码区是共享的，共享的目的是对于频繁被执行的程序，只需要在内存中有一份打码即可<br>代码区是只读的，使其只读的原因是防止程序意外的修改了它的指令<br>全局区：</p>
-<p>全局变量和静态变量存放于此<br>全局区还包含了常量区，字符串常量和其他常量也存放于此<br>该区域的数据在程序结束之后由操作系统释放<br>程序运行后<br>栈区：</p>
-<p>由编译器自动分配释放，存放函数的参数值，局部变量等。<br>注意事项：不要返回局部变量的地址，栈区开辟的数据由编译器自动释放<br>堆区：</p>
-<p>有程序员分配释放，若程序员不释放，程序结束之后有操作系统回收<br>在C++中主要利用new在堆区中开辟内存<br>int* p &#x3D; new int(10);<br>1<br>new运算符<br>在堆区开辟数据</p>
-<p>堆区开辟的数据，由程序员手动开辟，手动释放，释放用delete</p>
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>目前中国的的车辆越来越多，由此引发的问题就是停车困难的问题，本文是基于这现状提出的停车场管理系统</p>
+<h1 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h1><h2 id="1-停车场车位预览图"><a href="#1-停车场车位预览图" class="headerlink" title="1.停车场车位预览图"></a>1.停车场车位预览图</h2><h2 id="2-车辆出库操作"><a href="#2-车辆出库操作" class="headerlink" title="2.车辆出库操作"></a>2.车辆出库操作</h2><h2 id="3-车辆入库操作"><a href="#3-车辆入库操作" class="headerlink" title="3.车辆入库操作"></a>3.车辆入库操作</h2><h2 id="4-停车缴费管理"><a href="#4-停车缴费管理" class="headerlink" title="4.停车缴费管理"></a>4.停车缴费管理</h2><h2 id="5-用户管理"><a href="#5-用户管理" class="headerlink" title="5.用户管理"></a>5.用户管理</h2><h2 id="6-设置"><a href="#6-设置" class="headerlink" title="6.设置"></a>6.设置</h2><h1 id="基本实现"><a href="#基本实现" class="headerlink" title="基本实现"></a>基本实现</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>由于需要留存数据，所以我们需要挂一个后台数据库，本系统采用的是sql数据库，该数据库的优点是程序体积小，软件响应快，开发和学习成本低。另外，需要安装wampsever软件，该软件是一个整合包，在这个整合包里，包含了apache，php，和MySQL服务器，通过这个软件可以不用配置环境直接进行开发。</p>
+<h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2><h3 id="后台登录界面"><a href="#后台登录界面" class="headerlink" title="后台登录界面"></a>后台登录界面</h3><p>通过PHP代码和html相互配合实现</p>
 
       </div>
       <div class="post-tags-categories">
@@ -435,7 +430,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/2023/07/12/我的第一篇博客文章/" target="_blank" title="我的第一篇博客文章">http://ninenineliu.github.io/2023/07/12/我的第一篇博客文章/</a>
+    <a href="/2023/07/12/我的第一篇博客文章/" target="_blank" title="基于PHP的停车场管理系统的设计与实现">http://ninenineliu.github.io/2023/07/12/我的第一篇博客文章/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -688,7 +683,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!--  -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD"><span class="toc-text">实现功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%81%9C%E8%BD%A6%E5%9C%BA%E8%BD%A6%E4%BD%8D%E9%A2%84%E8%A7%88%E5%9B%BE"><span class="toc-text">1.停车场车位预览图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BD%A6%E8%BE%86%E5%87%BA%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="toc-text">2.车辆出库操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BD%A6%E8%BE%86%E5%85%A5%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="toc-text">3.车辆入库操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%81%9C%E8%BD%A6%E7%BC%B4%E8%B4%B9%E7%AE%A1%E7%90%86"><span class="toc-text">4.停车缴费管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-text">5.用户管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%AE%BE%E7%BD%AE"><span class="toc-text">6.设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%9E%E7%8E%B0"><span class="toc-text">基本实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-text">具体实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2"><span class="toc-text">后台登录界面</span></a></li></ol></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -723,7 +718,7 @@
             <div class="post-img-box">
               <a href="/2023/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-61f99f8dcf899f54cad2a1aa28b21e44_1440w.webp" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-61f99f8dcf899f54cad2a1aa28b21e44_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
@@ -732,7 +727,7 @@
                   <span class="post-date">07-12</span>
                 
               </div>
-              <a class="post-title" href="/2023/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
+              <a class="post-title" href="/2023/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">基于PHP的停车场管理系统的设计与实现</a>
             </div>
           </div>
         
